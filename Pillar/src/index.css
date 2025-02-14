@@ -1,0 +1,306 @@
+:root{
+    /* colors */
+    --Dusty-Rose: hsl(19, 52%, 67%);
+    --Deep-Teal:  hsl(180, 100%, 25%);
+    --charcoal:   hsl(0, 0%, 20%);
+    --Ivory: hsl(60, 100%, 97%);
+    --Gold: hsl(46, 65%, 49%);
+    --white: hsl(0, 0%, 100%);
+    --text-color: hsl(60, 81.82%, 43.14%);
+    --purple-color: #1f2e42;
+    --danger: red;
+
+    /* typography */
+
+    --ff-poppins: "poppins", sans-sarif;
+
+    /* font size */
+    --fs-1: 32px;
+    --fs-2: 26px;
+    --fs-3: 22px;
+    --fs-4: 18px;
+    --fs-5: 15px;
+    --fs-6: 14px;
+
+    /* font weight */
+
+    --fw-700: 700;
+    --fw-600: 600;
+    --fw-500: 500;
+    --fw-400: 400;
+
+    /* transition */
+
+    --transition: 0.25s ease-in-out;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--ff-poppins), sans-serif;
+}
+
+.container {
+    padding: 0 20px; /* Center content */
+    max-height: 100vh;
+    max-width: 1200px;
+}
+/* ---------------------Cold Mail User Landing page ----------------*/
+.cold-title-wrapper{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.username{
+    color: var(--charcoal);
+    font-weight: 600;
+}
+.cold-title{
+    font-size: 2rem;
+    font-weight: var(--fw-600);
+    width: 100%;
+}
+
+.title-cta{
+    position: relative;
+    top: 0.5rem;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Add spacing between items */
+    margin-top: 4rem;
+}
+
+.wrapper{   
+    margin-top: 2rem; 
+    position: absolute;
+    width: 40%;
+}
+.cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+    background: var(--charcoal);
+    color: var(--white);
+    font-weight: var(--fw-600);
+    transition: background-color var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--purple-color); 
+    color: var(--white);
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    padding: 0px 5px;
+}
+.cta-wrapper .cta-image{
+    width: 2rem;
+}
+
+.wrapper .cta-alt{
+    top: 1.5rem;
+    width: 100%; 
+      height: 1px; 
+      background-color: #ccc; 
+      margin: 20px 0; 
+}
+
+.cta-alt-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.cta-display{
+    margin-top: 10rem;
+}
+
+.cta-broker {
+    font-size: 10px;
+    border: 1px solid var(--purple-color);
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+
+/* -----------------UPLOAD CSV FILE SECTION ----------------*/
+
+.upload-section {
+    position: relative;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-title {
+    font-size: 12px;
+    font-weight: var(--fw-600);
+    color: #ccc;
+}
+
+.upload-body {
+    margin-top: 2rem;
+    gap: 2rem;
+    display: grid;
+}
+
+.upload-cta .icon {
+    background: var(--white);
+    border-radius: 50%;
+    border: 2px solid green;
+    padding: 3px;
+    font-size: 13px;
+    color: green;
+    position: relative; 
+}
+
+.upload-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-cta:not(:last-child) .icon::after {
+    content: '';
+    width: 1px;
+    height: 40px; 
+    position: absolute;
+    left: 50%; 
+    top: 130%; 
+    transform: translateX(-50%);
+    background-color: green;
+}
+
+.upload-snippet{
+    margin-left: 2.5rem;
+    font-weight: 5px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.email-title{
+    font-size: 1.5rem;
+}
+.email-count-display{
+    margin-bottom: 20px;
+}
+.csv-count{
+    font-size: 13px;
+    color: #ccc;
+    font-weight: var(--fw-600);
+}
+
+.ant-table-tbody > tr > td {
+    border: 1px solid #ddd;
+    padding: 8px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.ant-table-thead > tr > th {
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-table-tbody > tr:last-child > td {
+    border-bottom: 2px solid #333;
+    padding: 8px;
+}
+
+.ant-table-tbody > tr:hover {
+    background-color: #f5f5f5;
+}
+
+.ant-table-thead > tr > th:hover {
+    background-color: #e0e0e0;
+}
+
+.ellipsis {
+    display: inline-block;
+    max-width: 118px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center; 
+}
+
+.custom-scrollbar {
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-top: 16px;
+  
+    /* Firefox styling */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+  
+  /* For the container itself */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;    /* vertical scrollbar width */
+    height: 4px;   /* horizontal scrollbar height */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Target the nested .ant-table-body element's scrollbar */
+  .custom-scrollbar .ant-table-body::-webkit-scrollbar {
+    height: 4px !important;
+  }
+  
+  .custom-scrollbar .ant-table-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar .ant-table-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar .ant-table-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
