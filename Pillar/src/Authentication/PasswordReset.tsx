@@ -1,10 +1,13 @@
 import { Button, Card, Typography } from "antd";
 import { MailOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 
 const { Title, Text } = Typography;
 
 const CheckEmailPage = () => {
+  useDocumentTitle("SecretPlace - Passowrd Reset");
+
   const navigate = useNavigate();
 
   const handleLoginRedirect = () => {

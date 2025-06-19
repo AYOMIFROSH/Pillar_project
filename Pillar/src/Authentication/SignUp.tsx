@@ -4,12 +4,15 @@ import { Spin, message, Input, Form, Button, Typography, Card } from "antd";
 import UseRegister from "../Hooks/useSignup";
 import '../Auth.css';
 import { initializeTheme, toggleTheme, setAuthBackground } from "../utils/ThemeManager";
+import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 import feature1 from '../assets/image2.png'
 
 const { Title, Text } = Typography;
 
 // Inline Logo Component
 const InlineSecretPlaceLogo: React.FC = () => {
+  useDocumentTitle("SecretPlace - Sign Up");
+
   return (
     <div className="logo-container">
       <svg

@@ -4,6 +4,7 @@ import { Spin, message, Input, Form, Button, Typography, Card } from "antd";
 import useLogin from "../Hooks/useLogin";
 import "../Auth.css";
 import { initializeTheme, toggleTheme, setAuthBackground } from "../utils/ThemeManager";
+import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 import feature2 from '../assets/image1.png'
 
 
@@ -11,6 +12,8 @@ const { Title, Text } = Typography;
 
 // Inline Logo Component
 const InlineSecretPlaceLogo: React.FC = () => {
+
+  useDocumentTitle("SecretPlace - Login");
 
   return (
     <div className="logo-container">

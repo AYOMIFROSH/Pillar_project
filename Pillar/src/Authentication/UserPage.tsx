@@ -7,8 +7,11 @@ import { useGmail } from "../Hooks/useGmail";
 import { useCsvUpload } from "../Hooks/useCsvUpload";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/useContext";
+import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 
 const UserPage = () => {
+    useDocumentTitle("SecretPlace - Dashboard");
+    
     const navigate = useNavigate();
     const { userData } = useAuth();
     const { isConnected, loading, connectGmail } = useGmail();

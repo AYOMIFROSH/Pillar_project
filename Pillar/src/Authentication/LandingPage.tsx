@@ -3,9 +3,11 @@ import { ChevronRight, Users, Mail, Briefcase, CheckCircle, Database, Send, Arro
 import Dashboard from '../assets/image.png'
 import '../Landing.css';
 import { initializeTheme, toggleTheme } from '../utils/ThemeManager';
+import { useSectionTitle } from '../utils/useSectionTitle';
 
 // Inline Logo Component extracted from Login/SignUp
-const InlineSecretPlaceLogo = () => {
+const InlineSecretPlaceLogo = (): JSX.Element => {
+
     return (
         <div className="logo-container">
             <svg
@@ -41,6 +43,32 @@ const InlineSecretPlaceLogo = () => {
 };
 
 const Landing = () => {
+    const sections = [
+        { id: 'hero', title: 'SecretPlace - Welcome' },
+        { id: 'features', title: 'SecretPlace - Features' },
+        { id: 'trusted', title: 'SecretPlace - Trusted Companies' },
+        { id: 'how-it-works', title: 'SecretPlace - How it works' },
+        { id: 'testimonials', title: 'SecretPlace - Testimonies' },
+        { id: 'pricing', title: 'SecretPlace - Pricing' },
+        { id: 'management', title: 'SecretPlace - Get Started' },
+
+    ];
+
+    useSectionTitle(sections);
+
+    useEffect(() => {
+        const handleHashChange = () => {
+            const hash = window.location.hash.substring(1);
+            const section = sections.find(s => s.id === hash);
+            if (section) {
+                document.title = section.title;
+            }
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, [sections]);
+
     // State for mobile navigation and theme
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(true);
@@ -149,7 +177,7 @@ const Landing = () => {
             </nav>
 
             {/* Hero Section */}
-            <header className="hero">
+            <header className="hero" id='hero'>
                 <div className="container">
                     <div className="hero-content">
                         <div className="hero-text">
@@ -185,7 +213,7 @@ const Landing = () => {
             </header>
 
             {/* Trusted By Section */}
-            <section className="trusted-section">
+            <section className="trusted-section" id='trusted'>
                 <div className="container">
                     <p className="trusted-title">
                         Trusted by forward-thinking companies
@@ -502,7 +530,7 @@ const Landing = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="cta-section">
+            <section className="cta-section" id='management'>
                 <div className="container">
                     <div className="cta-content">
                         <h2 className="cta-title">

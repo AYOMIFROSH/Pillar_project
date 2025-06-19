@@ -4,6 +4,7 @@ import { useCsvContext } from "../context/CsvContext";
 import { useCsvUpload } from "../Hooks/useCsvUpload";
 import LoadingProgress from "../Hooks/LoadingProgress";
 import MassSendModal from "../Hooks/MassSendModal";
+import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 
 interface EditingCell {
   id: string;
@@ -12,6 +13,8 @@ interface EditingCell {
 }
 
 const SimpleEditableCsvTable = () => {
+  useDocumentTitle("SecretPlace - Csv Table");
+
   const { data } = useCsvContext();
   const { fetchCsvRecords, updateCsvRecord, deleteCsvRecord, bulkDeleteCsvRecords } = useCsvUpload();
   const [searchQuery, setSearchQuery] = useState("");

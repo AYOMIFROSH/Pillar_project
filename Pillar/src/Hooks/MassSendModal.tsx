@@ -3,6 +3,7 @@ import { Modal, Button, Input, Form, Spin, message } from "antd";
 import { SendOutlined } from "@ant-design/icons";
 import { useGenerateEmail } from "../Hooks/useGeneratedEmail";
 import SendingProgressBar from "./LoadingForEmail"; 
+import { useDocumentTitle } from "./useDocumentTitle";
 
 const { TextArea } = Input;
 
@@ -19,6 +20,8 @@ const MassSendModal: React.FC<MassSendModalProps> = ({
   onSendComplete,
   selectedEmails,
 }) => {
+  useDocumentTitle("SecretPlace - Mass Email Send");
+
   const [form] = Form.useForm();
   const [loadingOpenAI, setLoadingOpenAI] = useState(false);
   const { generateEmail, sendEmails, isSending } = useGenerateEmail();

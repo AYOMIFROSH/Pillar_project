@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Spin, message, Typography, Form, Input, Button, Card } from "antd";
+import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 import { useForgotPassword } from "../Hooks/useForgotPassword";
 import '../index.css';
 
@@ -15,6 +16,8 @@ type ForgottenPwdErrors = {
 };
 
 const ForgottenPwd = () => {
+  useDocumentTitle("SecretPlace - Forgot Password");
+
   const [formValues, setFormValues] = useState<ForgottenPwdFormValues>({
     email: "",
   });
