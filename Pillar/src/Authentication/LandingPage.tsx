@@ -220,7 +220,7 @@ const Landing = () => {
                     </p>
                     <div className="trusted-logos">
                         <div className="logo-item">
-                            <img src="/api/placeholder/120/48" alt="Company 1" />
+                            <img src="https://www.daizyexpress.com" alt="Company 1" />
                         </div>
                         <div className="logo-item">
                             <img src="/api/placeholder/120/48" alt="Company 2" />
@@ -426,7 +426,7 @@ const Landing = () => {
                                 <h3 className="pricing-title">Starter</h3>
                                 <p className="pricing-description">Perfect for individuals and small teams.</p>
                                 <p className="pricing-price">
-                                    <span className="price-amount">$9</span>
+                                    <span className="price-amount">$10</span>
                                     <span className="price-period">/month</span>
                                 </p>
                                 <ul className="pricing-features">
@@ -458,7 +458,7 @@ const Landing = () => {
                                 <h3 className="pricing-title">Pro</h3>
                                 <p className="pricing-description">For growing teams and businesses.</p>
                                 <p className="pricing-price">
-                                    <span className="price-amount">$29</span>
+                                    <span className="price-amount">$50</span>
                                     <span className="price-period">/month</span>
                                 </p>
                                 <ul className="pricing-features">
@@ -493,7 +493,7 @@ const Landing = () => {
                                 <h3 className="pricing-title">Enterprise</h3>
                                 <p className="pricing-description">For large organizations and teams.</p>
                                 <p className="pricing-price">
-                                    <span className="price-amount">$99</span>
+                                    <span className="price-amount">$100</span>
                                     <span className="price-period">/month</span>
                                 </p>
                                 <ul className="pricing-features">
