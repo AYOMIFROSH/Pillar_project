@@ -34,22 +34,22 @@
     --transition: 0.25s ease-in-out;
 }
 
-*, *::before, *::after {
+/* *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 
 body {
     font-family: var(--ff-poppins), sans-serif;
 }
 
-.container {
-    padding: 0 20px; /* Center content */
+/* .container {
+    padding: 0 20px;
     max-height: 100vh;
     max-width: 1200px;
-}
+} */
 /* ---------------------Cold Mail User Landing page ----------------*/
 .cold-title-wrapper{
     text-align: center;
@@ -70,15 +70,15 @@ body {
     position: relative;
     top: 0.5rem;
 }
-
+/* 
 .cta-container {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Add spacing between items */
+    gap: 2rem;
     margin-top: 4rem;
-}
+} */
 
-.wrapper{   
+/* .wrapper{   
     margin-top: 2rem; 
     position: absolute;
     width: 40%;
@@ -140,7 +140,7 @@ body {
     padding: 2px 8px;
     border-radius: 10px;
     margin: 0.5rem;
-}
+} */
 
 
 /* -----------------UPLOAD CSV FILE SECTION ----------------*/
