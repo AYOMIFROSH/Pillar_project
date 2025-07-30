@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Spin, message, Typography, Form, Input, Button, Card } from "antd";
 import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 import { useForgotPassword } from "../Hooks/useForgotPassword";
+import { initializeTheme, setAuthBackground } from "../utils/ThemeManager";
 import '../index.css';
 
 const { Title, Text } = Typography;
@@ -23,6 +24,17 @@ const ForgottenPwd = () => {
   });
   const [errors, setErrors] = useState<ForgottenPwdErrors>({});
   const { forgotPassword, loading } = useForgotPassword();
+    const [isDarkMode, setIsDarkMode] = useState(true);
+
+        useEffect(() => {
+      // Initialize theme from localStorage on component mount
+      const initialTheme = initializeTheme();
+      setIsDarkMode(initialTheme);
+  
+      // Set the background image via CSS variable
+      setAuthBackground(initialTheme);
+  
+    }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -51,25 +63,15 @@ const ForgottenPwd = () => {
     }
   };
 
+
   return (
-    <div className="container">
+    <div className="auth-container">
     <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        backgroundColor: "#f0f2f5",
-        padding: "20px",
-      }}
+      className="auth-wrapper"
     >
       <Card
-        style={{
-          maxWidth: 400,
-          width: "100%",
-          borderRadius: 8,
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        }}
+        className={`auth-card ${isDarkMode ? 'dark' : 'light'}`}
+
       >
         <Title level={3} style={{ textAlign: "center", marginBottom: 10 }}>
           Forgot Password
@@ -91,6 +93,7 @@ const ForgottenPwd = () => {
               placeholder="example@gmail.com"
               value={formValues.email}
               onChange={handleChange}
+              className={`auth-input ${isDarkMode ? 'dark' : 'light'}`}
             />
           </Form.Item>
 
