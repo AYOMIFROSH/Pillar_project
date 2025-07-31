@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Disallow private/admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /dashboard/private/
+
+# Allow important pages
+Allow: /dashboard
+Allow: /login
+Allow: /signup
+Allow: /pricing
+Allow: /about
+Allow: /contact
+Allow: /features
+Allow: /trusted
+Allow: /management
+Allow: /how-it-works
+Allow: /testimonials
+
+# Sitemap location
+Sitemap: https://mysecretplace.vercel.app/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

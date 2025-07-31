@@ -213,6 +213,7 @@ const Landing = () => {
             </header>
 
             {/* Trusted By Section */}
+            {/* Trusted By Section */}
             <section className="trusted-section" id='trusted'>
                 <div className="container">
                     <p className="trusted-title">
@@ -220,19 +221,44 @@ const Landing = () => {
                     </p>
                     <div className="trusted-logos">
                         <div className="logo-item">
-                            <img src="https://www.daizyexpress.com" alt="Company 1" />
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                    alt="GitHub"
+                                />
+                            </a>
                         </div>
                         <div className="logo-item">
-                            <img src="/api/placeholder/120/48" alt="Company 2" />
+                            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+                                    alt="Google"
+                                />
+                            </a>
                         </div>
                         <div className="logo-item">
-                            <img src="/api/placeholder/120/48" alt="Company 3" />
+                            <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" 
+                                    alt="Stripe"
+                                />
+                            </a>
                         </div>
                         <div className="logo-item">
-                            <img src="/api/placeholder/120/48" alt="Company 4" />
+                            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src="https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg"
+                                    alt="Vercel"
+                                />
+                            </a>
                         </div>
                         <div className="logo-item">
-                            <img src="/api/placeholder/120/48" alt="Company 5" />
+                            <a href="https://twilio.com" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg"
+                                    alt="Twilio"
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>

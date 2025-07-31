@@ -7,7 +7,6 @@ import { initializeTheme, toggleTheme, setAuthBackground } from "../utils/ThemeM
 import { useDocumentTitle } from "../Hooks/useDocumentTitle";
 import feature2 from '../assets/image1.png'
 
-
 const { Title, Text } = Typography;
 
 // Inline Logo Component
