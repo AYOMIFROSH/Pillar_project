@@ -221,17 +221,9 @@ const Landing = () => {
                     </p>
                     <div className="trusted-logos">
                         <div className="logo-item">
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                                <img
-                                    src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                                    alt="GitHub"
-                                />
-                            </a>
-                        </div>
-                        <div className="logo-item">
                             <a href="https://google.com" target="_blank" rel="noopener noreferrer">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
                                     alt="Google"
                                 />
                             </a>
@@ -239,16 +231,8 @@ const Landing = () => {
                         <div className="logo-item">
                             <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg"
                                     alt="Stripe"
-                                />
-                            </a>
-                        </div>
-                        <div className="logo-item">
-                            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
-                                <img
-                                    src="https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg"
-                                    alt="Vercel"
                                 />
                             </a>
                         </div>
@@ -260,6 +244,19 @@ const Landing = () => {
                                 />
                             </a>
                         </div>
+                        <div className="logo-item">
+                            <a
+                                href="https://mail.google.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_256px.png "
+                                    alt="Gmail logo"
+                                />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </section>
